@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Save and load Python objects to and from a file using pickle."""
+"""Save and load Python objects to and from a file"""
 import pickle
 
 
 def serialize_and_save_to_file(data, filename):
-    """Serialize data with pickle and write it to filename."""
+    """Serialize data with and write it to a file"""
     with open(filename, "wb") as file:
         pickle.dump(data, file)
 
 
 def load_and_deserialize(filename):
-    """Read filename and return the object stored in it."""
+    """Read the file and return the object stored in it"""
     with open(filename, "rb") as file:
         return pickle.load(file)

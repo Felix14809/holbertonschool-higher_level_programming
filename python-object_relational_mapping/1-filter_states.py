@@ -23,7 +23,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     query = """
     SELECT *
-    from states
+    FROM states
     WHERE name
     LIKE BINARY 'N%'
     ORDER BY id

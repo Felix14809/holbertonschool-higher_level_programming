@@ -22,12 +22,14 @@ if __name__ == "__main__":
         )
 
     cursor = db.cursor()
-    query = """
+    query = (
+    """
     SELECT *
     FROM states
     WHERE name = '%s'
     ORDER BY id
     """
+    )
 
     cursor.execute(query, (SEARCHED,))
 

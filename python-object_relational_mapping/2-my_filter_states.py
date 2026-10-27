@@ -26,7 +26,7 @@ if __name__ == "__main__":
     SELECT *
     from states
     WHERE name = '{}'
-    ORDER BY id"
+    ORDER BY id
     """
 
     cursor.execute(query.format(SEARCHED))

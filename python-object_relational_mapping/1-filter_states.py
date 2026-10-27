@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Lists all states from the database hbtn_0e_0_usa."""
+"""Filters a list of states from the database hbtn_0e_0_usa."""
 
 
 import MySQLdb
@@ -22,11 +22,11 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
     query = """
-    "SELECT *
+    SELECT *
     from states
     WHERE name
     LIKE BINARY 'N%'
-    ORDER BY id"
+    ORDER BY id
     """
 
     cursor.execute(query)

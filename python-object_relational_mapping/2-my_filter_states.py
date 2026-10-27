@@ -22,14 +22,14 @@ if __name__ == "__main__":
         )
 
     cursor = db.cursor()
-    query =(
-    """
-    SELECT *
-    FROM states
-    WHERE name = '{}'
-    ORDER BY id
-    """
-    )
+    query = (
+        """
+        SELECT *
+        FROM states
+        WHERE name = '{}'
+        ORDER BY id
+        """
+        )
 
     cursor.execute(query.format(SEARCHED))
 

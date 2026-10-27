@@ -29,7 +29,7 @@ if __name__ == "__main__":
         LEFT JOIN states s ON c.state_id = s.id
         ORDER BY c.id
         """
-    )
+        )
     cursor.execute(query)
 
     query_rows = cursor.fetchall()

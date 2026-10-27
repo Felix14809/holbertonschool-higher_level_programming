@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Makes a class that represents a city
+queries a class that represents a city
 """
 import sys
 from model_state import Base, State

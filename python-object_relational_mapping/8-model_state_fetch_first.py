@@ -18,6 +18,6 @@ if __name__ == "__main__":
     session = Session(engine)
 
     state = session.query(State).order_by(State.id).first()
-    print(f"{state.id}: {state.name}" if state != None else "Nothing")
+    print(f"{state.id}: {state.name}" if state is not None else "Nothing")
 
     session.close()

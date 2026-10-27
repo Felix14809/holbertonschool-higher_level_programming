@@ -26,7 +26,7 @@ if __name__ == "__main__":
         """
         SELECT *
         FROM states
-        WHERE name = '%s'
+        WHERE name = %s
         ORDER BY id
         """
         )

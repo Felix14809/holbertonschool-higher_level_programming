@@ -50,7 +50,7 @@ def login():
         identity=user["username"],
         additional_claims={"role": user["role"]}
         )
-    return jsonify({"acces_token": token})
+    return jsonify({"access_token": token})
 
 
 @app.route("/admin-only")

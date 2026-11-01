@@ -6,6 +6,19 @@ from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt)
 from werkzeug.security import generate_password_hash, check_password_hash
 
+users = {
+    "user1": {
+        "username": "user1",
+        "password": generate_password_hash("password"),
+        "role": "user",
+    },
+    "admin1": {
+        "username": "admin1",
+        "password": generate_password_hash("password"),
+        "role": "admin",
+    },
+}
+
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = "The secret secret"
 jwt = JWTManager(app)

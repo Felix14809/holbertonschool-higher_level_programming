@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
-from flask import Flask
+from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt
+from flask_jwt_extended import (
+    JWTManager, create_access_token, jwt_required, get_jwt)
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.config["A_SECRET_KEY"] = "The secret secret"
+app.config["JWT_SECRET_KEY"] = "The secret secret"
 jwt = JWTManager(app)
 auth = HTTPBasicAuth()
 
@@ -36,7 +37,7 @@ def login():
         identity=user["username"],
         additional_claims={"role": user["role"]}
         )
-    return jsonify({"token": token})
+    return jsonify({"acces_token": token})
 
 
 @app.route("/admin-only")

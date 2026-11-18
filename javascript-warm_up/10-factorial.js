@@ -1,12 +1,6 @@
 #!/usr/bin/node
-function factorial (total, number) {
-  if (number < 2) {
-    return total;
-  } else {
-    number--;
-    total *= number;
-    return factorial(total, number);
-  }
+function factorial (n) {
+  return n < 2 ? 1 : n * factorial(n - 1);
 }
 const number = Number(process.argv[2]);
 if (Number.isNaN(number) || number < 1) {
